@@ -2,17 +2,17 @@
 # appends each number into a list
 # Prrint out each number entered
 # Gets the average them
-# Author: Irene Kilgannon
 
+numbers = []  #Create an empty list
 
-new_list = []
+number = int(input("Enter number (0 to quit): "))
 
-num = int(input("Enter number (0 to quit): "))
+while number != 0:
+    numbers.append(number)
+    number = int(input("Enter another (0 to quit): "))    # Had an error here as forgot to use 'int'
 
-for num in new_list:
-    if num != 0:
-        num = input("Enter another (0 to quit): ")
-        new_list.append()
-    else: 
-        print(new_list)
+for value in numbers:
+    print(value)
 
+average = float(sum(numbers)) / len(numbers)
+print(f'The average of {average}')
